@@ -15,7 +15,7 @@ class CreatePersosTable extends Migration
     {
         Schema::create('persos', function (Blueprint $table) {
             $table->increments('id');
-			$table->foreign('user_id')->references('id')->on('users');
+			$table->integer('user_id');
 			$table->string('name')->unique();
 			$table->string('race');
             $table->timestamps();
