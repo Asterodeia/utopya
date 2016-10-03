@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('persos')
+});
+
+Route::post('/perso', function (Request $request)){
+
+});
+
+Route::delete('/perso/{id}', function (Request $request)){
+
 });
