@@ -14,3 +14,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\PersoController;
 
 Route::resource('persos', 'PersoController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
