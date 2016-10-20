@@ -13,8 +13,14 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\PersoController;
 
-Route::resource('persos', 'PersoController');
+Route::resource('persos', 'PersoController', ['only' => [
+    'create', 'store'
+]]);
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/', function(){
+    return view('index');
+});

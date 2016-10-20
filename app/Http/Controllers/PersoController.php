@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Requests;
 use App\Perso;
@@ -28,9 +29,7 @@ class PersoController extends Controller
      */
     public function index()
     {
-        return view('persos', [
-            'persos' => Perso::orderBy('created_at', 'asc')->get()
-        ]);
+        //
     }
 
     /**
@@ -40,7 +39,7 @@ class PersoController extends Controller
      */
     public function create()
     {
-        //
+        return view('persos-create');
     }
 
     /**
@@ -52,13 +51,13 @@ class PersoController extends Controller
     public function store(Request $request)
     {
         $perso = new Perso;
-        $perso->user_id = 1;
+        $perso->user_id = Auth::user()->id;
         $perso->name = $request->input('name');
         $perso->race = $request->input('race');
 
         Log::info('Ajout du perso', ['perso' => $perso]);
         $perso->save();
-        return redirect('/persos');
+        return redirect('/home');
     }
 
     /**
