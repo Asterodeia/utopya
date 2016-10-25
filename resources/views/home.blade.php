@@ -1,7 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.hj')
 
 @section('content')
-    <h1>Page d'accueil (HJ)</h1>
+    <div class="center-content">
+    <h1>Accueil</h1>
     @if (count($persos) > 0)
         <div class="collection">
             @foreach ($persos as $perso)
@@ -9,5 +10,6 @@
             @endforeach
         </div>
     @endif
-    <a href="/persos/create" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">perm_identity</i></a>
+    <a href="/persos/create" class="pure-button pure-button-primary">Nouveau perso</a>
+    </div>
 @endsection
