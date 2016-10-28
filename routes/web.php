@@ -16,6 +16,8 @@ use App\Http\Controllers\PersoController;
 Route::resource('persos', 'PersoController', ['only' => [
     'create', 'store'
 ]]);
+Route::get('/persos/play/{persoId}', 'PersoController@play');
+Route::post('/persos/logout', 'PersoController@logout');
 
 Auth::routes();
 
@@ -24,3 +26,5 @@ Route::get('/home', 'HomeController@index');
 Route::get('/', function(){
     return view('index');
 });
+
+Route::get('/ej/home', 'EJ\EJHomeController@index');

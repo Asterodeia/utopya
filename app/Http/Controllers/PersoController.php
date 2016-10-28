@@ -23,16 +23,6 @@ class PersoController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -71,6 +61,28 @@ class PersoController extends Controller
         //
     }
 
+
+    /**
+     * "Jouer" ce perso
+     * @param $idPerso
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function play($idPerso)
+    {
+        //login du perso
+        $perso = Perso::where('id', $idPerso)->first();
+        session(['perso' => $perso]);
+        return redirect('/ej/home');
+    }
+
+    /**
+     * "Déconnecter" ce perso
+     */
+    public function logout(){
+        session()->forget('perso');
+        return redirect('/home');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -90,17 +102,6 @@ class PersoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
     {
         //
     }

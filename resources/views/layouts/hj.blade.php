@@ -1,4 +1,7 @@
 @include('includes.head')
+<link href="/css/hj.css" rel="stylesheet">
+</head>
+<body>
 <header>
     <div class="hj-menu pure-menu pure-menu-horizontal pure-menu-fixed">
         <a class="pure-menu-heading" href="">Utopya</a>
@@ -11,7 +14,7 @@
                 <li class="pure-menu-item">{{ Auth::user()->name }}<a class="pure-menu-link"
                                                                       href="{{ url('/logout') }}"
                                                                       onclick="event.preventDefault();
-                                                                       document.getElementById('logout-form').submit();">Déconnexion</a>
+                                                                      document.getElementById('logout-form').submit();">Déconnexion</a>
 
                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}

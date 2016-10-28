@@ -1,0 +1,41 @@
+body {
+    background-color: #fffde7;
+}
+
+.pure-g.ej-template {
+    display: flex;
+}
+.right-pane {
+    background-color: #f0f4c3;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 0 0 0 15px;
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.left-pane {
+    padding: 0.5rem;
+    padding-right: 1rem;
+    background-color: #fffde7;
+    color: black;
+}
+
+.collection {
+    margin: 0.5rem 0 1rem 0;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    position: relative;
+}
+
+.collection .collection-item {
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.collection .collection-item:last-child {
+    border-bottom: none;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+}

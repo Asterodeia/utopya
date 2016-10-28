@@ -20,6 +20,7 @@
     <!--<![endif]-->
 
     <script src="https://use.fontawesome.com/cedaa496d9.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
     <link href="/css/app.css" rel="stylesheet">
 
@@ -29,5 +30,3 @@
                 'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-</head>
-<body>
