@@ -13,18 +13,22 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\PersoController;
 
-Route::resource('persos', 'PersoController', ['only' => [
-    'create', 'store'
-]]);
-Route::get('/persos/play/{persoId}', 'PersoController@play');
-Route::post('/persos/logout', 'PersoController@logout');
-
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
 
 Route::get('/', function(){
     return view('index');
 });
+Route::get('/home', 'HomeController@index');
+
+Route::get('/persos/play/{persoId}', 'PersoController@play');
+Route::post('/persos/logout', 'PersoController@logout');
+Route::resource('persos', 'PersoController', ['only' => [
+    'create', 'store'
+]]);
 
 Route::get('/ej/home', 'EJ\EJHomeController@index');
+Route::get('/ej/lieux/{id}', 'EJ\LieuController@show');
+Route::get('/ej/lieux/{id_lieu}/posts/create', 'EJ\PostController@create');
+Route::get('/ej/chapitres/{id_chapitre}/posts/create', 'EJ\PostController@createInChapitre');
+Route::get('/ej/chapitres/{id_chapitre}', 'EJ\PostController@listInChapitre');
+Route::post('/ej/posts', 'EJ\PostController@store');

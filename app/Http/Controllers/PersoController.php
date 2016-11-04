@@ -29,7 +29,7 @@ class PersoController extends Controller
      */
     public function create()
     {
-        return view('persos-create');
+        return view('persos.create');
     }
 
     /**
@@ -51,18 +51,6 @@ class PersoController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-
-    /**
      * "Jouer" ce perso
      * @param $idPerso
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
@@ -81,28 +69,5 @@ class PersoController extends Controller
     public function logout(){
         session()->forget('perso');
         return redirect('/home');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 }

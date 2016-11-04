@@ -6,7 +6,7 @@
         @if (count($lieux) > 0)
             <div class="collection">
                 @foreach ($lieux as $lieu)
-                    <li class="collection-item">{{ $lieu->name }} ({{ $lieu->description }})</li>
+                    <li class="collection-item"><a href={{url('ej/lieux', [$lieu->id])}}>{{ $lieu->name }} ({{ $lieu->description }})</a></li>
                 @endforeach
             </div>
         @endif

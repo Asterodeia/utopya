@@ -8,4 +8,9 @@ class Lieu extends Model
 {
     protected $table = 'lieux';
     public $timestamps = true;
+
+    public function chapitres()
+    {
+        return $this->hasMany('App\Chapitre');
+    }
 }

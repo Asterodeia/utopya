@@ -1,22 +1,75 @@
 body {
     background-color: #fffde7;
+    font-family: 'Open Sans', sans-serif;
 }
 
+.pure-g [class*="pure-u"]{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-family: 'Satisfy', cursive;
+}
 .pure-g.ej-template {
     display: flex;
 }
-.right-pane {
-    background-color: #f0f4c3;
-    color: black;
-    padding: 0.5rem;
-    border-radius: 0 0 0 15px;
+
+header {
+    background: url('../images/dark_wood.png');
+    padding: 1rem;
     box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.left-pane {
-    padding: 0.5rem;
-    padding-right: 1rem;
+
+header a {
+    color: white;
+    font-family: 'Satisfy', cursive;
+    font-size: 3.5em;
+}
+
+.right-pane {
+    background: url('../images/dark_wood.png');
+    padding: 1rem;
+    padding-bottom: 2rem;
+    text-align: right;
+    border-radius: 0 0 0 15px;
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    position: relative;
+    min-height: 500px;
+}
+.right-pane .perso .name{
+    font-family: 'Satisfy', cursive;
+    color: white;
+    font-size: 3em;
+    line-height: 2.5rem;
+}
+.right-pane .perso i {
+    font-size: 18em;
+    color: white;
+}
+.right-pane .bottom {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    text-align: right;
+}
+.right-pane .bottom a {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: #ffecb3;
+}
+.left-pane div.content {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
     background-color: #fffde7;
     color: black;
+}
+
+.center-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
 }
 
 .collection {
@@ -24,18 +77,63 @@ body {
     border: 1px solid #e0e0e0;
     overflow: hidden;
     position: relative;
+    background: url('../images/lightpaperfibers.png');
 }
 
 .collection .collection-item {
     line-height: 1.5rem;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     border-bottom: 1px solid #e0e0e0;
 }
 
 .collection .collection-item:last-child {
     border-bottom: none;
 }
+
+.collection .collection-item a {
+    color: black;
+}
+
+.chapitre {
+    overflow: hidden;
+    position: relative;
+}
+
+.chapitre .post {
+    line-height: 1.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    background: url('../images/lightpaperfibers.png');
+    margin-bottom: 1.5rem;
+}
+
+.chapitre .post .entete {
+    font-family: 'Satisfy', cursive;
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.chapitre .post .contenu {
+    font-size: 1.2em;
+    line-height: 1.8rem;
+}
+
 ul {
     padding: 0;
     list-style-type: none;
+}
+
+.pure-button-primary, a.pure-button-primary {
+    background-color: #00695c;
+    color: white;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+textarea#texte {
+    height: 500px;
+    margin-bottom: 1rem;
 }
