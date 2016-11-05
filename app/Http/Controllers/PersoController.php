@@ -69,7 +69,7 @@ class PersoController extends Controller
     }
 
     /**
-     * "Déconnecter" ce perso
+     * "Déconnecter" ce persoe
      */
     public function logout(){
         session()->forget('perso');
