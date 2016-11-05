@@ -1,4 +1,5 @@
 @include('includes.head')
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link href="/css/hj.css" rel="stylesheet">
 </head>
 <body>

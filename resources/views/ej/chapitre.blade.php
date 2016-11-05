@@ -9,7 +9,7 @@
                 @foreach ($posts as $post)
                     <div class="post">
                         <div class="entete">{{ $post->titre }}, par {{ $post->auteur->name }}</div>
-                        <div class="contenu">{{ $post->texte }}</div>
+                        <div class="contenu">{!! nl2br($post->texte, true) !!}</div>
                     </div>
                 @endforeach
             </div>

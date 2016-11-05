@@ -2,11 +2,19 @@
 
 @section('content')
     <div class="center-content">
-        <h1>Nouveau message</h1>
-        <h2>{{$lieu->name}}, chapitre « {{$chapitre->titre}} »</h2>
+        <h1>Nouveau
+            @if($chapitre)
+                message
+            @else
+                chapitre
+            @endif
+        </h1>
+        <h2>{{$lieu->name}}@if($chapitre), chapitre « {{$chapitre->titre}} »@endif</h2>
         <form action="{{url('ej/posts')}}" method="POST" class="pure-form pure-form-stacked">
             {{ csrf_field() }}
-            <input type="hidden" id="chapitre_id" name="chapitre_id" value="{{$chapitre->id}}"/>
+            @if($chapitre)
+                <input type="hidden" id="chapitre_id" name="chapitre_id" value="{{$chapitre->id}}"/>
+            @endif
             <input type="hidden" id="lieu_id" name="lieu_id" value="{{$lieu->id}}"/>
             <label for="titre">Titre</label>
             <input id="titre" name="titre" type="text" class="validate" required>

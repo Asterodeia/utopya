@@ -1,6 +1,6 @@
 body {
-    background-color: #fffde7;
     font-family: 'Open Sans', sans-serif;
+    background-color: #fffde7;
 }
 
 .pure-g [class*="pure-u"]{
@@ -62,7 +62,6 @@ a {
 }
 .left-pane div.content {
     padding: 1rem 0.5rem 0.5rem 0.5rem;
-    background-color: #fffde7;
     color: black;
 }
 
@@ -82,7 +81,7 @@ a {
 
 .collection .collection-item {
     line-height: 1.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -92,6 +91,14 @@ a {
 
 .collection .collection-item a {
     color: black;
+}
+.collection .collection-item .titre {
+    display: block;
+    width: 100%;
+    font-size: 1.5em;
+}
+.collection .collection-item .description {
+   font-style: italic;
 }
 
 .chapitre {

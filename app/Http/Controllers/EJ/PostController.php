@@ -27,6 +27,7 @@ class PostController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('perso');
     }
 
     /**
@@ -37,7 +38,7 @@ class PostController extends Controller
     public function create($id_lieu)
     {
         $lieu = Lieu::findOrFail($id_lieu);
-        return view('ej.posts.create', ['lieu' => $lieu]);
+        return view('ej.posts.create', ['lieu' => $lieu, 'chapitre' => false]);
     }
 
     /**

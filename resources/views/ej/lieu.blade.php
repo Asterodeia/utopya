@@ -3,7 +3,7 @@
 @section('content')
     <div class="center-content">
         <h1>{{ $lieu->name }}</h1>
-        <p>{{$lieu->description}}</p>
+        <h2>{{$lieu->description}}</h2>
         @if (count($chapitres) > 0)
             <ul class="collection">
                 @foreach ($chapitres as $chapitre)
