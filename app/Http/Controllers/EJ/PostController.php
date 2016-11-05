@@ -72,6 +72,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'titre' => 'required|max:40',
+            'texte' => 'required'
+        ]);
         if($request->has('chapitre_id')){
             $chapitre = Chapitre::findOrFail($request->input('chapitre_id'));
         }else{

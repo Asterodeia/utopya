@@ -15,7 +15,7 @@ class CreateLieuxTable extends Migration
     {
         Schema::create('lieux', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('nom');
             $table->text('description');
             $table->timestamps();
         });

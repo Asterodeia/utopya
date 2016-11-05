@@ -16,7 +16,7 @@
         <div class="perso">
             @if(Session::has('perso'))
                 <div class="name">
-                {{ Session::get('perso')->name }}, {{ Session::get('perso')->race }}
+                {{ Session::get('perso')->nom }}, {{ Session::get('perso')->race }}
                 </div>
                 <i class="fa fa-user" aria-hidden="true"></i>
             @endif

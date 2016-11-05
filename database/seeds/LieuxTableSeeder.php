@@ -12,15 +12,15 @@ class LieuxTableSeeder extends Seeder
     public function run()
     {
         DB::table('lieux')->insert([
-            'name' => 'Grand place',
+            'nom' => 'Grand place',
             'description' => 'La plus grande place de la ville.'
         ]);
         DB::table('lieux')->insert([
-            'name' => 'La forêt',
+            'nom' => 'La forêt',
             'description' => 'Une forêt à l\'extérieur de la ville.'
         ]);
         DB::table('lieux')->insert([
-            'name' => 'La plage',
+            'nom' => 'La plage',
             'description' => 'Au bord de l\'océan.'
         ]);
     }

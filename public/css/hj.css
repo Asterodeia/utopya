@@ -68,19 +68,6 @@ form {
     max-width: 768px;
 }
 
-.error-field {
-    visibility: hidden;
-    font-size: 0.8em;
-    color: rgb(223, 117, 20);
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 0.8em;
-}
-
-.error-field.error {
-    visibility: visible;
-}
-
 .message {
     background-color: #fff176;
     border: 1px solid #e0e0e0;

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Nom d\'utilisateur ou mot de passe inconnus',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed'   => 'Ces identifiants ne correspondent pas à nos enregistrements',
+    'throttle' => 'Trop de tentatives de connexion. Veuillez essayer de nouveau dans :seconds secondes.',
 
 ];

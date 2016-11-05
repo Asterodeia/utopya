@@ -5,7 +5,7 @@
 <body>
 <header>
     <div class="hj-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Utopya</a>
+        <a class="pure-menu-heading" href="/home">Utopya</a>
         <ul class="pure-menu-list">
             @if (Auth::guest())
                 <li class="pure-menu-item"><a class="pure-menu-link" href="{{ url('/login') }}">Login</a></li>

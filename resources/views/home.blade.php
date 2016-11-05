@@ -12,7 +12,7 @@
             <div class="collection">
                 @foreach ($persos as $perso)
                     <li class="collection-item pure-g">
-                        <div class="pure-u-4-5">{{ $perso->name }} ({{ $perso->race }})</div>
+                        <div class="pure-u-4-5">{{ $perso->nom }}, {{ $perso->race }}</div>
                         <div class="pure-u-1-5"><a href={{url('persos/play', [$perso->id])}} class="pure-button play">Jouer</a>
                         </div>
                     </li>

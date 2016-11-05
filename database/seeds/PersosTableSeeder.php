@@ -12,19 +12,19 @@ class PersosTableSeeder extends Seeder
     public function run()
     {
         DB::table('persos')->insert([
-            'name' => 'Hémihéli',
+            'nom' => 'Hémihéli',
             'race' => 'Humain',
             'user_id' => '1'
         ]);
 
         DB::table('persos')->insert([
-            'name' => 'Kheldom',
+            'nom' => 'Kheldom',
             'race' => 'Fée',
             'user_id' => '1'
         ]);
 
         DB::table('persos')->insert([
-            'name' => 'Pluhm',
+            'nom' => 'Pluhm',
             'race' => 'Elfe',
             'user_id' => '2'
         ]);

@@ -40,9 +40,14 @@ class PersoController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'nom' => 'required|unique:persos|max:40',
+            'race' => 'required|in:Eïl,Elfe,Hobbit,Humain,Nain'
+        ]);
+
         $perso = new Perso;
         $perso->user_id = Auth::user()->id;
-        $perso->name = $request->input('name');
+        $perso->nom = $request->input('nom');
         $perso->race = $request->input('race');
 
         Log::info('Ajout du perso', ['perso' => $perso]);
