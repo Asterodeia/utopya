@@ -58,24 +58,13 @@ return [
             'prefix' => '',
         ],
 
-        'mysql' => array(
-            'driver'    => 'mysql',
-            'host'      => $herokuHost,
-            'database'  => $herokuDatabase,
-            'username'  => $herokuUser,
-            'password'  => $herokuPassword,
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-        ),
-
-        'mysql_local' => [
+        'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => env('DB_HOST', $herokuHost),
+            'port' => env('DB_PORT', ''),
+            'database' => env('DB_DATABASE', $herokuDatabase),
+            'username' => env('DB_USERNAME', $herokuUser),
+            'password' => env('DB_PASSWORD', $herokuPassword),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
