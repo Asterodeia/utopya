@@ -60,10 +60,10 @@ return [
 
         'mysql' => array(
             'driver'    => 'mysql',
-            'host'      => $host,
-            'database'  => $database,
-            'username'  => $username,
-            'password'  => $password,
+            'host'      => $herokuHost,
+            'database'  => $herokuDatabase,
+            'username'  => $herokuUser,
+            'password'  => $herokuPassword,
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
