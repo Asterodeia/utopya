@@ -1,10 +1,10 @@
 <?php
 $herokuUrl = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$herokuHost = $url["host"];
-$herokuUser = $url["user"];
-$herokuPassword = $url["pass"];
-$herokuDatabase = substr($url["path"], 1);
+$herokuHost = $herokuUrl["host"];
+$herokuUser = $herokuUrl["user"];
+$herokuPassword = $herokuUrl["pass"];
+$herokuDatabase = substr($herokuUrl["path"], 1);
 
 return [
 
