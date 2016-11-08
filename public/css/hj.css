@@ -39,8 +39,7 @@ body {
  */
 
 .content-wrapper {
-    position: absolute;
-    top: 90px;
+    padding-top: 90px;
     width: 100%;
     min-height: 12%;
     z-index: 2;
