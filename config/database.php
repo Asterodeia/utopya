@@ -1,10 +1,17 @@
 <?php
-$herokuUrl = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$herokuHost = $herokuUrl["host"];
-$herokuUser = $herokuUrl["user"];
-$herokuPassword = $herokuUrl["pass"];
-$herokuDatabase = substr($herokuUrl["path"], 1);
+$herokuUrl = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$herokuHost = "";
+$herokuUsername = "";
+$herokuPassword = "";
+$herokuDatabase = "";
+if(isset($herokuUrl["host"])){
+    $herokuHost = $herokuUrl["host"];
+    $herokuUsername = $herokuUrl["user"];
+    $herokuPassword = $herokuUrl["pass"];
+    $herokuDatabase = substr($herokuUrl["path"], 1);
+}
+
 
 return [
 
@@ -61,10 +68,22 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', $herokuHost),
-            'port' => env('DB_PORT', ''),
             'database' => env('DB_DATABASE', $herokuDatabase),
-            'username' => env('DB_USERNAME', $herokuUser),
+            'username' => env('DB_USERNAME', $herokuUsername),
             'password' => env('DB_PASSWORD', $herokuPassword),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+
+        'mysql-dev' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', 'localhost'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
