@@ -9,7 +9,8 @@
                 chapitre
             @endif
         </h1>
-        <h2>{{$lieu->nom}}@if($chapitre), chapitre « {{$chapitre->titre}} »@endif</h2>
+        <h2><a href="{{url("ej/lieux", $lieu->id)}}">{{$lieu->nom}}</a>
+            @if($chapitre), chapitre « {{$chapitre->titre}} »@endif</h2>
         <form action="{{url('ej/posts')}}" method="POST" class="pure-form pure-form-stacked">
             {{ csrf_field() }}
             @if($chapitre)

@@ -10,19 +10,8 @@
 
     <title>Utopya</title>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-    <!--<![endif]-->
-
     <script src="https://use.fontawesome.com/cedaa496d9.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
-    <link href="/css/app.css" rel="stylesheet">
+    <script type="text/javascript" src="node-modules/jquery/dist/jquery.js"></script>
 
     <!-- Scripts -->
     <script>

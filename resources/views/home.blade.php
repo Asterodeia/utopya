@@ -9,7 +9,7 @@
             </div>
         @endif
         @if (count($persos) > 0)
-            <div class="collection">
+            <ul class="collection">
                 @foreach ($persos as $perso)
                     <li class="collection-item pure-g">
                         <div class="pure-u-4-5">{{ $perso->nom }}, {{ $perso->race }}</div>
@@ -17,7 +17,7 @@
                         </div>
                     </li>
                 @endforeach
-            </div>
+            </ul>
         @endif
         <a href={{url("/persos/create")}} class="pure-button pure-button-primary">Nouveau personnage</a>
     </div>

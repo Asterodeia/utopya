@@ -1,5 +1,4 @@
 @include('includes.head')
-<link href="https://fonts.googleapis.com/css?family=Satisfy|Open+Sans" rel="stylesheet">
 <link href="/css/ej.css" rel="stylesheet">
 </head>
 <body>

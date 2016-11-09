@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pure-g [class*="pure-u"] {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pure-form select {
+  height: inherit;
+}
+
+form.pure-form-stacked button {
+  margin-top: 1rem;
+}
+
+.error-field {
+  visibility: hidden;
+  font-size: 0.8em;
+  color: rgb(223, 117, 20);
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 0.8em;
+}
+
+.error-field.error {
+  visibility: visible;
+}

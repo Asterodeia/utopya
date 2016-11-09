@@ -1,0 +1,175 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Satisfy|Open+Sans);
+
+// Variables
+@import "variables";
+
+// Purecss
+@import "node_modules/purecss/build/pure";
+@import "node_modules/purecss/build/grids-responsive";
+
+@import "app";
+
+html {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fffde7;
+}
+@media screen and (max-width: 568px){
+  html {
+    font-size: 13px;
+  }
+}
+
+.pure-g [class*="pure-u"]{
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.8rem;
+}
+a {
+  text-decoration: none;
+}
+.pure-g.ej-template {
+  display: flex;
+}
+
+header {
+  background: url('../images/dark_wood.png');
+  padding: 1rem;
+  box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  line-height: 2.5rem;
+
+  a {
+    color: white;
+    font-family: 'Satisfy', cursive;
+    font-size: 2.5rem;
+  }
+}
+
+.right-pane {
+  background: url('../images/dark_wood.png');
+  padding: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  border-radius: 0 0 0 15px;
+  box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  position: relative;
+  min-height: 500px;
+
+  .perso .name{
+    font-family: 'Satisfy', cursive;
+    color: white;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .perso i {
+    font-size: 18em;
+    color: white;
+  }
+  .bottom {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    text-align: right;
+  }
+  .bottom a {
+    width: 100%;
+  }
+}
+
+.left-pane div.content {
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  color: black;
+
+  .center-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
+  }
+
+  .collection {
+    margin: 0.5rem 0 1rem 0;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    position: relative;
+    background: url('../images/lightpaperfibers.png');
+  }
+
+  .collection .collection-item {
+    line-height: 1.5rem;
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .collection .collection-item:last-child {
+    border-bottom: none;
+  }
+
+  .collection .collection-item a {
+    color: black;
+  }
+  .collection .collection-item .titre {
+    display: block;
+    width: 100%;
+    font-size: 1.5em;
+  }
+  .collection .collection-item .description {
+    font-style: italic;
+  }
+
+  .chapitre {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .chapitre .post {
+    line-height: 1.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    background: url('../images/lightpaperfibers.png');
+    margin-bottom: 1.5rem;
+  }
+
+  .chapitre .post .entete {
+    font-family: 'Satisfy', cursive;
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .chapitre .post .contenu {
+    font-size: 1.2em;
+    line-height: 1.8rem;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .pure-button-primary, a.pure-button-primary {
+    background-color: #00695c;
+    color: white;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+
+  textarea#texte {
+    height: 500px;
+    margin-bottom: 1rem;
+  }
+
+  h2 a {
+    color: black;
+    text-decoration: underline;
+  }
+}

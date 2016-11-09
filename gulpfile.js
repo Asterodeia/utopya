@@ -14,6 +14,10 @@ require('laravel-elixir-vue');
  */
 
 elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
-});
+    mix.sass('ej.scss', 'public/css/ej.css');
+    mix.sass('hj.scss', 'public/css/hj.css');
+    mix.browserSync({
+        proxy: 'utopya.dev'
+    });
+})
+;
