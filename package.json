@@ -11,7 +11,9 @@
     "laravel-elixir-browsersync-official": "^1.0.0",
     "laravel-elixir-vue": "^0.1.4",
     "laravel-elixir-webpack-official": "^1.0.2",
-    "lodash": "^4.14.0",
     "purecss": "^0.6.0"
+  },
+  "scripts": {
+    "postinstall": "gulp --production"
   }
 }

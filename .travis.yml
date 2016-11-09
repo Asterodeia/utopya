@@ -23,6 +23,3 @@ deploy:
   on: master
   run:
     - php artisan migrate
-    - npm install --global gulp-cli
-    - npm install
-    - gulp --production
