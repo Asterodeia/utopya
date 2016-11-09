@@ -11,7 +11,6 @@
     <title>Utopya</title>
 
     <script src="https://use.fontawesome.com/cedaa496d9.js"></script>
-    <script type="text/javascript" src="node-modules/jquery/dist/jquery.js"></script>
 
     <!-- Scripts -->
     <script>

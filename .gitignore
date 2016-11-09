@@ -8,4 +8,3 @@ Homestead.yaml
 tests/_intellij*
 .vagrant
 Vagrantfile
-public/css/*.css
