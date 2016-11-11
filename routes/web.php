@@ -28,7 +28,5 @@ Route::resource('persos', 'PersoController', ['only' => [
 
 Route::get('/ej/home', 'EJ\EJHomeController@index');
 Route::get('/ej/lieux/{id}', 'EJ\LieuController@show');
-Route::get('/ej/lieux/{id_lieu}/posts/create', 'EJ\PostController@create');
-Route::get('/ej/chapitres/{id_chapitre}/posts/create', 'EJ\PostController@createInChapitre');
 Route::get('/ej/chapitres/{id_chapitre}', 'EJ\PostController@listInChapitre');
 Route::post('/ej/posts', 'EJ\PostController@store');

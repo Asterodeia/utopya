@@ -1,14 +1,10 @@
-
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Satisfy|Open+Sans);
-
 // Variables
-@import "variables";
-
+@import "variables_ej";
 // Purecss
 @import "node_modules/purecss/build/pure";
 @import "node_modules/purecss/build/grids-responsive";
-
 @import "app";
 
 html {
@@ -16,25 +12,30 @@ html {
   font-family: 'Open Sans', sans-serif;
   background-color: #fffde7;
 }
-@media screen and (max-width: 568px){
+
+@media screen and (max-width: 568px) {
   html {
     font-size: 13px;
   }
 }
 
-.pure-g [class*="pure-u"]{
+.pure-g [class*="pure-u"] {
   font-family: 'Open Sans', sans-serif;
 }
+
 h1 {
   font-size: 2rem;
 }
+
 h2 {
   font-family: 'Satisfy', cursive;
   font-size: 1.8rem;
 }
+
 a {
   text-decoration: none;
 }
+
 .pure-g.ej-template {
   display: flex;
 }
@@ -42,7 +43,7 @@ a {
 header {
   background: url('../images/dark_wood.png');
   padding: 1rem;
-  box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   line-height: 2.5rem;
 
   a {
@@ -58,12 +59,12 @@ header {
   padding-bottom: 2rem;
   text-align: center;
   border-radius: 0 0 0 15px;
-  box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   position: relative;
   min-height: 500px;
   overflow: hidden;
 
-  .perso .name{
+  .perso .name {
     font-family: 'Satisfy', cursive;
     color: white;
     font-size: 2rem;
@@ -130,24 +131,31 @@ header {
     position: relative;
   }
 
-  .chapitre .post {
+  .chapitre .post, .wrapping-message-form {
     line-height: 1.5rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     border: 1px solid #e0e0e0;
     background: url('../images/lightpaperfibers.png');
     margin-bottom: 1.5rem;
-  }
 
-  .chapitre .post .entete {
-    font-family: 'Satisfy', cursive;
-    font-size: 1.8em;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
-  }
+    h2 {
+      margin-top: 0;
+    }
 
-  .chapitre .post .contenu {
-    font-size: 1.2em;
-    line-height: 1.8rem;
+    .entete {
+      font-family: 'Satisfy', cursive;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .contenu {
+      font-size: 1.2em;
+      line-height: 1.8rem;
+    }
+
+    input, textarea {
+      background: rgba(255,255,255,0.5) ;
+    }
   }
 
   ul {
@@ -166,7 +174,6 @@ header {
 
   textarea#texte {
     height: 500px;
-    margin-bottom: 1rem;
   }
 
   h2 a {

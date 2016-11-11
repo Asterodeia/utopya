@@ -13,8 +13,6 @@
                 @endforeach
             </ul>
         @endif
-        <a href={{url("ej/lieux/".$lieu->id."/posts/create")}} class="pure-button pure-button-primary">
-            Nouveau chapitre
-        </a>
+        @include('ej.posts.create', ['lieu' => $lieu, 'chapitre' => false])
     </div>
 @endsection

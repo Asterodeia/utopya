@@ -14,6 +14,6 @@
                 @endforeach
             </div>
         @endif
-        <a href={{url("ej/chapitres/".$chapitre->id."/posts/create")}} class="pure-button pure-button-primary">Nouveau message</a>
+        @include('ej.posts.create', ['lieu' => $lieu, 'chapitre' => $chapitre])
     </div>
 @endsection

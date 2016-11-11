@@ -31,29 +31,6 @@ class PostController extends Controller
     }
 
     /**
-     * Formulaire pour créer un nouveau chapitre dans un lieu donné
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create($id_lieu)
-    {
-        $lieu = Lieu::findOrFail($id_lieu);
-        return view('ej.posts.create', ['lieu' => $lieu, 'chapitre' => false]);
-    }
-
-    /**
-     * Formulaire pour créer un nouveau message dans un chapitre
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function createInChapitre($id_chapitre)
-    {
-        $chapitre = Chapitre::findOrFail($id_chapitre);
-        $lieu = $chapitre->lieu;
-        return view('ej.posts.create', ['lieu' => $lieu, 'chapitre' => $chapitre]);
-    }
-
-    /**
      * @param $id_chapitre
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
