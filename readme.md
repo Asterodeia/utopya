@@ -1,6 +1,9 @@
 # Utopya
 
-Jeu de rôle en ligne de type PBEM (Play by Email) basé sur le framework PHP Laravel.
+### Status
+[![Build Status](https://travis-ci.org/Asterodeia/utopya.png)](https://travis-ci.org/Asterodeia/utopya)
+
+Jeu de rÃ´le en ligne de type PBEM (Play by Email) basÃ© sur le framework PHP Laravel.
 
 ## Official Documentation
 
