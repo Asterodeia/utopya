@@ -65,7 +65,7 @@ return [
             'prefix' => '',
         ],
 
-        'mysql' => [
+        'heroku' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', $herokuHost),
             'database' => env('DB_DATABASE', $herokuDatabase),
@@ -78,7 +78,7 @@ return [
             'engine' => null,
         ],
 
-        'mysql-dev' => [
+        'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'localhost'),
             'database' => env('DB_DATABASE', 'forge'),

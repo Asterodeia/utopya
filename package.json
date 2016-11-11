@@ -4,6 +4,13 @@
     "prod": "gulp --production",
     "dev": "gulp watch"
   },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "jquery": "^3.1.0",
+    "laravel-elixir": "^6.0.0-9",
+    "laravel-elixir-webpack-official": "^1.0.2",
+    "purecss": "^0.6.0"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "jquery": "^3.1.0",
