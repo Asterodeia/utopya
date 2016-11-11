@@ -9,3 +9,4 @@ tests/_intellij*
 .vagrant
 Vagrantfile
 public/css
+resources/lang/fr

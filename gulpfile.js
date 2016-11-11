@@ -16,5 +16,6 @@ require('laravel-elixir-vue');
 elixir(mix => {
     mix.sass('ej.scss', 'public/css/ej.css');
     mix.sass('hj.scss', 'public/css/hj.css');
+    mix.copy('vendor/caouecs/laravel-lang/src/fr', 'resources/lang/fr');
 })
 ;
