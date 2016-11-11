@@ -6,7 +6,7 @@
             <ul class="collection">
                 @foreach ($lieux as $lieu)
                     <li class="collection-item">
-                        <a href={{url('ej/lieux', [$lieu->id])}} class="titre">{{ $lieu->nom }}</a>
+                        <a href={{url('ej/lieux', [$lieu->id])}} class="lieu-name">{{ $lieu->nom }}</a>
                         <p class="description">{{ $lieu->description }}</p>
                     </li>
                 @endforeach

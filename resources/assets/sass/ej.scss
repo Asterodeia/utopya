@@ -9,7 +9,7 @@
 
 html {
   font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-family-1;
   background-color: #fffde7;
 }
 
@@ -20,22 +20,11 @@ html {
 }
 
 .pure-g [class*="pure-u"] {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-family-1;
 }
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-family: 'Satisfy', cursive;
-  font-size: 1.8rem;
-}
-
 a {
   text-decoration: none;
 }
-
 .pure-g.ej-template {
   display: flex;
 }
@@ -95,37 +84,49 @@ header {
     margin-right: auto;
     max-width: 768px;
   }
+  .lieu-name {
+    font-family: $font-family-2;
+    font-size: 2rem;
+  }
+  .description {
+    font-family: $font-family-1;
+    font-size: 1.2em;
+    line-height: 1.8rem;
+    font-weight: normal;
+  }
+  .chapitre-name, .post-name {
+    font-family: $font-family-2;
+    font-size: 1.8rem;
+  }
 
+  /*listes de lieux, de chapitres*/
   .collection {
     margin: 0.5rem 0 1rem 0;
     border: 1px solid #e0e0e0;
     overflow: hidden;
     position: relative;
     background: url('../images/lightpaperfibers.png');
+
+    .collection-item {
+      line-height: 1.5rem;
+      padding: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        color: black;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
-  .collection .collection-item {
-    line-height: 1.5rem;
-    padding: 0.7rem 1rem;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  .collection .collection-item:last-child {
-    border-bottom: none;
-  }
-
-  .collection .collection-item a {
-    color: black;
-  }
-  .collection .collection-item .titre {
-    display: block;
-    width: 100%;
-    font-size: 1.5em;
-  }
-  .collection .collection-item .description {
-    font-style: italic;
-  }
-
+  /* chapitre avec sa liste de posts */
   .chapitre {
     overflow: hidden;
     position: relative;
@@ -143,12 +144,13 @@ header {
     }
 
     .entete {
-      font-family: 'Satisfy', cursive;
+      font-family: $font-family-2;
       font-size: 1.8rem;
       margin-bottom: 1rem;
     }
 
     .contenu {
+      font-family: $font-family-1;
       font-size: 1.2em;
       line-height: 1.8rem;
     }

@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="center-content">
-        <h1>{{ $lieu->nom }}</h1>
-        <h2>{{$lieu->description}}</h2>
+        <h1 class="lieu-name">{{ $lieu->nom }}</h1>
+        <h2 class="description">{{$lieu->description}}</h2>
         @if (count($chapitres) > 0)
             <ul class="collection">
                 @foreach ($chapitres as $chapitre)
                     <li class="collection-item"><a
-                                href={{url("ej/chapitres", [$chapitre->id])}}>{{ $chapitre->titre }}</a>
+                                class="chapitre-name" href={{url("ej/chapitres", [$chapitre->id])}}>{{ $chapitre->titre }}</a>
                     </li>
                 @endforeach
             </ul>

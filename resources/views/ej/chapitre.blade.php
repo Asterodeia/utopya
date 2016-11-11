@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="center-content">
-        <h1>Chapitre: « {{ $chapitre->titre }} »</h1>
-        <h2><a href="{{url("ej/lieux", $lieu->id)}}">{{ $lieu->nom }}</a></h2>
+        <h2 class="lieu-name"><a href="{{url("ej/lieux", $lieu->id)}}">{{ $lieu->nom }}</a></h2>
+        <h1 class="chapitre-name">{{ $chapitre->titre }}</h1>
         @if (count($posts) > 0)
             <div class="chapitre">
                 @foreach ($posts as $post)
