@@ -9,7 +9,7 @@
                 @foreach ($posts as $post)
                     <div class="post">
                         <div class="entete">{{ $post->titre }}</div>
-                        <div class="sous-entete">par <span class="perso">{{ $post->auteur->nom }}</span> le {{date('d F Y', strtotime($post->created_at))}}</div>
+                        <div class="sous-entete">par <span class="perso">{{ $post->auteur->nom }}</span> le {{$post->created_at->format('j/m')}}</div>
                         <div class="contenu">{!! nl2br($post->texte, true) !!}</div>
                     </div>
                 @endforeach

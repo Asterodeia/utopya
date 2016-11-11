@@ -17,6 +17,10 @@ class Chapitre extends Model
         return $this->hasMany('App\Post');
     }
 
+    public function lastPost(){
+        return $this->hasOne('App\Post')->latest();
+    }
+
     public function lieu(){
         return $this->belongsTo('App\Lieu');
     }

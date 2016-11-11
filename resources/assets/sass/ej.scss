@@ -22,9 +22,11 @@ html {
 .pure-g [class*="pure-u"] {
   font-family: $font-family-1;
 }
+
 a {
   text-decoration: none;
 }
+
 .pure-g.ej-template {
   display: flex;
 }
@@ -98,6 +100,20 @@ header {
     font-family: $font-family-2;
     font-size: 1.8rem;
   }
+  .sous-entete {
+    font-family: $font-family-1;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: right;
+    font-style: italic;
+
+    .perso {
+      font-family: $font-family-2;
+      font-size: 1.4rem;
+      font-style: normal;
+    }
+  }
 
   /*listes de lieux, de chapitres*/
   .collection {
@@ -150,24 +166,11 @@ header {
     }
 
     .sous-entete {
-      font-family: $font-family-1;
-      font-size: 1.2rem;
-      line-height: 1.2rem;
-      padding-bottom: 0.5rem;
       margin-bottom: 0.5rem;
-      text-align: right;
-      font-style: italic;
       display: inline-block;
       float: right;
       border-bottom: 1px solid black;
-
-      .perso {
-        font-family: $font-family-2;
-        font-size: 1.4rem;
-        font-style: normal;
-      }
     }
-
     .contenu {
       font-family: $font-family-1;
       font-size: 1.2rem;
@@ -176,7 +179,7 @@ header {
     }
 
     input, textarea {
-      background: rgba(255,255,255,0.5) ;
+      background: rgba(255, 255, 255, 0.5);
     }
   }
 
@@ -202,4 +205,5 @@ header {
     color: black;
     text-decoration: underline;
   }
+
 }

@@ -36,8 +36,8 @@ class PostController extends Controller
      */
     public function listInChapitre($id_chapitre){
         $chapitre = Chapitre::findOrFail($id_chapitre);
-        $posts = $chapitre->posts()->orderBy('updated_at','asc')->get();
         $lieu = $chapitre->lieu;
+        $posts = $chapitre->posts()->orderBy('updated_at','asc')->get();
         return view('ej.chapitre', ['chapitre' => $chapitre, 'posts' => $posts, 'lieu' => $lieu]);
     }
 
