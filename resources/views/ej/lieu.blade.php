@@ -13,8 +13,8 @@
                         @if($chapitre->posts->count() == 1)
                             <div class="sous-entete">Un message</div>
                             <div class="sous-entete">Par <span
-                                        class="perso">{{$chapitre->posts->latest->auteur->nom}}</span>
-                                le {{$chapitre->dernierPost->created_at->format('j/m')}}</div>
+                                        class="perso">{{$chapitre->posts{0}->auteur->nom}}</span>
+                                le {{$chapitre->posts{0}->created_at->format('j/m')}}</div>
                         @else
                             <div class="sous-entete">{{$chapitre->posts->count()}} messages</div>
                             <div class="sous-entete">Créé par
