@@ -38,7 +38,7 @@ class LieuController extends Controller
     public function show($id)
     {
         $lieu = Lieu::findOrFail($id);
-        $chapitres = Chapitre::with('lastPost')->where('lieu_id', $id)->orderBy('updated_at','desc')->get();
+        $chapitres = $lieu->chapitres()->where('lieu_id', $id)->orderBy('updated_at','desc')->get();
 
         return view('ej/lieu', [
             'lieu' => $lieu,

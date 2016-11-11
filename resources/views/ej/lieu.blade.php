@@ -8,10 +8,23 @@
             <ul class="collection">
                 @foreach ($chapitres as $chapitre)
                     <li class="collection-item">
-                        <a class="chapitre-name" href={{url("ej/chapitres", [$chapitre->id])}}>{{ $chapitre->titre }}</a>
-                        <div class="sous-entete">Créé le {{$chapitre->created_at->format('j/m')}}</div>
-                        <div class="sous-entete">Modifié le {{$chapitre->updated_at->format('j/m')}}</div>
-                        <div class="sous-entete">Dernier post par <span class="perso">{{$chapitre->lastPost->auteur->nom}}</span></div>
+                        <a class="chapitre-name"
+                           href={{url("ej/chapitres", [$chapitre->id])}}>{{ $chapitre->titre }}</a>
+                        @if($chapitre->posts->count() == 1)
+                            <div class="sous-entete">Un message</div>
+                            <div class="sous-entete">Par <span
+                                        class="perso">{{$chapitre->posts->latest->auteur->nom}}</span>
+                                le {{$chapitre->dernierPost->created_at->format('j/m')}}</div>
+                        @else
+                            <div class="sous-entete">{{$chapitre->posts->count()}} messages</div>
+                            <div class="sous-entete">Créé par
+                                <span class="perso">{{$chapitre->posts{0}->auteur->nom}}</span>
+                                le {{$chapitre->created_at->format('j/m')}}</div>
+                            <div class="sous-entete">Dernier message par <span
+                                        class="perso">{{$chapitre->posts->last()->auteur->nom}}</span>
+                                le {{$chapitre->posts->last()->created_at->format('j/m')}}</div>
+                        @endif
+
                     </li>
                 @endforeach
             </ul>
