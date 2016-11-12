@@ -17,7 +17,7 @@
         <input id="password" name="password" type="password" placeholder="amortleselfes" required>
         <p class="error-field {{ $errors->has('password') ? 'error' : '' }}">{{ $errors->has('password') ? $errors->first('password') : 'Mot de passe faux' }}</p>
 
-        <label for="password_confirm" Confirmation du mot de passe</label>
+        <label for="password_confirmation" Confirmation du mot de passe</label>
         <input id="password_confirmation" name="password_confirmation" type="password" placeholder="amortleselfes">
         <p class="error-field {{ $errors->has('password_confirmation') ? 'error' : '' }}">{{ $errors->has('password_confirmation') ? $errors->first('password_confirmation') : 'Mot de passe faux' }}</p>
 
