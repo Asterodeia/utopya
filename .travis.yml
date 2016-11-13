@@ -3,7 +3,26 @@ language: php
 php:
   - 7.0
 
+cache:
+  directories:
+      - node_modules
+      - vender
+      - $HOME/.composer/cache
+
+services:
+  - mysql
+
+before_install:
+  - nvm install 0.12
+  - nvm use 0.12
+
+install:
+  - composer install
+  - npm install
+  - npm install gulp
+
 before_script:
+  - gulp
   - cp .env.travis .env
   - mysql -e 'create database homestead_test;'
   - composer self-update
@@ -13,7 +32,6 @@ before_script:
   - php artisan migrate:refresh --seed
 
 script:
-  - gulp
   - vendor/bin/phpunit
 
 deploy:
