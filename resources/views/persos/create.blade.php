@@ -4,6 +4,15 @@
     <form action="{{url('persos')}}" method="POST" class="pure-form pure-form-stacked">
         {{ csrf_field() }}
         <legend>Nouveau personnage</legend>
+        <label>Caractéristiques</label>
+        <table class="pure-table pure-table-horizontal pure-table-striped caracteristiques">
+            @foreach ($caracteristiques as $carac=>$value)
+                <tr>
+                    <td>{{$carac}} </td>
+                    <td>{{$value}}</td>
+                </tr>
+            @endforeach
+        </table>
         <label for="nom">Nom</label>
         <input id="nom" name="nom" type="text" class="validate" required value="{{ old('nom') }}">
         <p class="error-field {{ $errors->has('nom') ? 'error' : '' }}">{{ $errors->has('nom') ? $errors->first('nom') : 'Votre nom de personnage n\'est pas valide' }}</p>
