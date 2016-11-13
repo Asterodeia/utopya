@@ -11,7 +11,7 @@ class HJTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        App::setLocale('fr');
+        App::setLocale('ot');
         $this->artisan('migrate:refresh', [
             '--seed' => '1'
         ]);
@@ -66,7 +66,7 @@ class HJTest extends TestCase
             ->check('remember');
         $this->press('Se connecter')
             ->seePageIs('/login')
-            ->see('Ces identifiants ne correspondent pas à nos enregistrements');
+            ->see('auth.failed');
     }
 
     public function testCreatePerso()
@@ -96,6 +96,6 @@ class HJTest extends TestCase
             ->select('Elfe', 'race')
             ->press('Créer')
             ->seePageIs('persos/create')
-            ->see('La valeur du champ nom est déjà utilisée.');
+            ->see('validation.unique');
     }
 }
