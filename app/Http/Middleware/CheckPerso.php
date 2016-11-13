@@ -15,7 +15,7 @@ class CheckPerso
      */
     public function handle($request, Closure $next)
     {
-        if(!$request->session()->has('perso') || $request->session()->get('perso')->user != $request->user()){
+        if(!$request->session()->has('perso') || $request->session()->get('perso')->user->id != $request->user()->id){
             return redirect('/home')->with('message', 'Merci de choisir un personnage.');
         }
         return $next($request);
