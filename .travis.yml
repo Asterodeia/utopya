@@ -5,8 +5,7 @@ php:
 
 cache:
   directories:
-      - node_modules
-      - vender
+      - vendor
       - $HOME/.composer/cache
 
 services:

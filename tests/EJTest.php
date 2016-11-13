@@ -14,6 +14,7 @@ class EJTest extends TestCase
     public function setUp()
     {
         parent::setUp();
+        App::setLocale('fr');
         $this->artisan('migrate:refresh', [
             '--seed' => '1'
         ]);
