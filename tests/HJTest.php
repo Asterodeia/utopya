@@ -72,16 +72,38 @@ class HJTest extends TestCase
     public function testCreatePerso()
     {
         $user = factory(App\User::class)->create();
-        $this->actingAs($user)
+        $response = $this->actingAs($user)
             ->visit('/home')
             ->see($user->name)
             ->click('Nouveau personnage')
-            ->seePageIs('persos/create')
+            ->seePageIs('persos/create');
+        $caracs = $this->getResponseData($response->response, 'caracteristiques');
+        $this->see('FO')
+            ->see('AG')
             ->type('Elfe chadiv', 'nom')
             ->select('Elfe', 'race')
             ->press('Créer')
             ->seePageIs('home')
-            ->see('Elfe chadiv');
+            ->see('Elfe chadiv')
+            ->seeInDatabase('persos', [
+                'nom' => 'Elfe chadiv',
+                'CO' => $caracs['CO']
+            ]);;
+    }
+
+    public function testCaracteristics()
+    {
+        $user = factory(App\User::class)->create();
+        $response = $this->actingAs($user)
+            ->visit('/persos/create');
+        $caracs = $this->getResponseData($response->response, 'caracteristiques');
+        $this->type('Kheldom', 'nom')
+            ->select('Elfe', 'race')
+            ->press('Créer');
+        $caracs2 = $this->getResponseData($response->response, 'caracteristiques');
+        $this->assertEquals($caracs['FO'], $caracs2['FO']);
+        $this->assertEquals($caracs['IT'], $caracs2['IT']);
+        $this->assertEquals($caracs['IG'], $caracs2['IG']);
     }
 
     public function testCreateExistingPerso()
